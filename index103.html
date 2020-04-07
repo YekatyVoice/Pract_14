@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+	<script src="jquery-3.4.1.min.js"></script>
+	<script>
+
+			class Hero {
+				constructor(name, level) {
+					this.name = name;
+					this.level = level;
+				}
+				greet() {
+					return `${this.name} says hello.`;
+				}
+			}
+		  
+			class Mage extends Hero {
+				constructor(name, level, spell) {
+					super(name, level);
+					this.spell = spell;
+				}
+			}
+			
+			class Warrior extends Hero {
+				constructor(name, level, weapon) {
+					super(name, level);
+					this.weapon = weapon;
+				}
+			}
+			
+			Hero.prototype.greet = function () {
+				return `${this.name} says hello.`;
+			}
+			
+			Mage.prototype.cast = function(){
+				return `${this.name} conjures ${this.spell} .`;
+			}
+			hero = new Mage("Copperfield", 1, "wand");
+			
+			alert(hero.greet());
+			alert(hero.cast());
+
+	</script>
+    </head>
+    <body>
+    </body>
+</html>

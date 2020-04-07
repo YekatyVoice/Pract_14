@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="jquery-3.4.1.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                class Manager {
+                    constructor(name, surname, age, rate, days) {
+                        this.name = name;
+                        this.surname = surname;
+                        this.age = age;
+                        this.rate = rate;
+                        this.days = days;
+                    }
+                    getName() {
+                        return this.name;
+                    }
+                    setName(value) {
+                        this.name = value;
+                    }
+                    getSurname() {
+                        return this.surname;
+                    }
+                    setSurname(value) {
+                        this.surname = value;
+                    }
+                    getAge() {
+                        return this.age;
+                    }
+                    setAge(value) {
+                        this.age = value;
+                    }
+                    getRate() {
+                        return this.rate;
+                    }
+                    setRate(value) {
+                        this.rate = value;
+                    }
+                    getDays() {
+                        return this.days;
+                    }
+                    setDays(value) {
+                        this.days = value;
+                    }
+                    getSalary() {
+                        return this.days * this.rate;
+                    }
+                }
+
+                var manager = new Manager("Дональд", "Трамп", 73, 10, 31);
+                var manager1 = new Manager("Екатерина", "Войцеховская", 37, 10, 30);
+                var manager2 = new Manager("Наталия", "Снаркова", 30, 10, 30);
+                var manager3 = new Manager("Мария", "Русинович", 35, 10, 29);
+                var manager4 = new Manager("Ольга", "Орловская", 29, 10, 31);
+                var manager5 = new Manager("Павел", "Тылец", 26, 10, 28);
+				
+                $('#btn0').click(function(){
+                    alert('Name: ' + manager.name);
+                    alert('Surname: ' + manager.surname);
+                    alert('Age: ' + manager.age);
+                    alert('Rate: ' + manager.rate);
+                    alert('Days: ' + manager.days);
+                    alert('Salary: ' + manager.getSalary());
+                 });
+				 
+                $('#btn1').click(function(){
+                    alert('Name: ' + manager1.name);
+                    alert('Surname: ' + manager1.surname);
+                    alert('Age: ' + manager1.age);
+                    alert('Rate: ' + manager1.rate);
+                    alert('Days: ' + manager1.days);
+                    alert('Salary: ' + manager1.getSalary());
+                 });
+				 
+				$('#btn2').click(function(){
+                    alert('Name: ' + manager2.name);
+                    alert('Surname: ' + manager2.surname);
+                    alert('Age: ' + manager2.age);
+                    alert('Rate: ' + manager2.rate);
+                    alert('Days: ' + manager2.days);
+                    alert('Salary: ' + manager2.getSalary());
+                 });
+				 
+                $('#btn3').click(function(){
+                    alert('Name: ' + manager3.name);
+                    alert('Surname: ' + manager3.surname);
+                    alert('Age: ' + manager3.age);
+                    alert('Rate: ' + manager3.rate);
+                    alert('Days: ' + manager3.days);
+                    alert('Salary: ' + manager3.getSalary());
+                 });
+				 
+				$('#btn4').click(function(){
+                    alert('Name: ' + manager4.name);
+                    alert('Surname: ' + manager4.surname);
+                    alert('Age: ' + manager4.age);
+                    alert('Rate: ' + manager4.rate);
+                    alert('Days: ' + manager4.days);
+                    alert('Salary: ' + manager4.getSalary());
+                 });
+				 
+                $('#btn5').click(function(){
+                    alert('Name: ' + manager5.name);
+                    alert('Surname: ' + manager5.surname);
+                    alert('Age: ' + manager5.age);
+                    alert('Rate: ' + manager5.rate);
+                    alert('Days: ' + manager5.days);
+                    alert('Salary: ' + manager5.getSalary());
+                 });
+                $('#btn6').click(function(){
+                    alert('Sum salary: ' + (manager.getSalary() + manager1.getSalary() + manager2.getSalary() + manager3.getSalary() + manager4.getSalary() + manager5.getSalary()));
+                 });				 
+            })
+        </script>
+    </head>
+    <body>
+        <button type="button" id="btn0" name="button">Manager Дональд</button>
+		<button type="button" id="btn1" name="button">Manager 1</button>
+		<button type="button" id="btn2" name="button">Manager 2</button>
+		<button type="button" id="btn3" name="button">Manager 3</button>
+		<button type="button" id="btn4" name="button">Manager 4</button>
+		<button width = 300 type="button" id="btn5" name="button">Manager 5</button><br><br>
+		<button type="button" id="btn6" name="button">Sum salary</button>
+		
+    </body>
+</html>

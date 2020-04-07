@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="jquery-3.4.1.min.js"></script>
+        <script>
+                class Manager {
+                    constructor(name, surname, age, rate, days) {
+                        this.name = name;
+                        this.surname = surname;
+                        this.age = age;
+                        this.rate = rate;
+                        this.days = days;
+                    }
+                    getName() {
+                        return this.name;
+                    }
+                    setName(value) {
+                        this.name = value;
+                    }
+                    getSurname() {
+                        return this.surname;
+                    }
+                    setSurname(value) {
+                        this.surname = value;
+                    }
+                    getAge() {
+                        return this.age;
+                    }
+                    setAge(value) {
+                        this.age = value;
+                    }
+                    getRate() {
+                        return this.rate;
+                    }
+                    setRate(value) {
+                        this.rate = value;
+                    }
+                    getDays() {
+                        return this.days;
+                    }
+                    setDays(value) {
+                        this.days = value;
+                    }
+                    getSalary() {
+                        return this.days * this.rate;
+                    }
+                }
+                var manager = new Manager("Дональд", "Трамп", 73, 10, 31);
+                    alert('Name: ' + manager.name);
+                    alert('Surname: ' + manager.surname);
+                    alert('Age: ' + manager.age);
+                    alert('Rate: ' + manager.rate);
+                    alert('Days: ' + manager.days);
+                    alert('Salary: ' + manager.getSalary() + ' dollars');
+        </script>
+    </head>
+    <body>
+    </body>
+</html>

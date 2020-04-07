@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<script src="jquery-3.4.1.min.js" type="text/javascript"> </script>
+	<script>
+	function Hero (name, level) {
+	   this.name = name;
+	   this.level = level;
+	}
+	function Mage (name, level, spell) {
+	   Hero.call(this, name, level);
+	   this.spell = spell;
+	}
+	function Warrior (name, level, weapon) {
+      Hero.call(this, name, level);
+      this.weapon = weapon;
+	}
+	function Healer (name, level, spell) {
+      Hero.call(this, name, level);
+      this.spell = spell;
+	}
+	
+	Warrior.prototype = Object.create(Hero.prototype);
+	Healer.prototype = Object.create(Hero.prototype);
+	Mage.prototype = Object.create(Hero.prototype);
+	
+	Hero.prototype.greet = function() {
+	  return `${this.name} says hello.`;
+     }	
+	Warrior.prototype.attack = function() {
+	  return `${this.name} attack with the ${this.weapon}.`;
+	}
+     Healer.prototype.heal = function() {
+      return `${this.name} casts ${this.spell}.`;
+     }
+	 Mage.prototype.heal = function() {
+	  return `${this.name} conjures ${this.spell}.`;
+	 }
+    const hero1 = new Warrior("Bjorn", 1, "axe");
+    const hero2 = new Healer("Kanin", 1, "cure");	
+	const hero3 = new Mage("Copperfield", 1, "wand");
+	alert(hero1.greet());
+	alert(hero2.greet());
+	alert(hero3.greet());	
+	alert(hero1.attack());
+	alert(hero2.heal());
+	alert(hero3.heal());
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>
